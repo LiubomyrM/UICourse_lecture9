@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>LITS WEBUI course</title>
+    <meta name="description" content="LITS WEBUI course">
+    <meta name="author" content="Liu">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main>
+        <form id="msgbox" action='#' method="get" class="event_container">
+            <input id="msg" type="text" name="txt" value="txt">
+            <input type="submit" name="btn" value="send">
+        </form>
+        <form onsubmit="event.preventDefault();">
+            1
+        </form>
+        <form onsubmit="return toSubmit();">
+            2
+        </form>
+        <form>
+            3
+        </form>
+        <form>
+            4
+        </form>
+        <script>
+            function toSubmit(){
+                alert('I will not submit');
+                return false;
+            }
+                    <form onsubmit="return toSubmit();" >
+        </script>
+    </main>
+</body>
+</html>
